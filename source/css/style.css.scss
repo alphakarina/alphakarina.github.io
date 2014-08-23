@@ -1,0 +1,243 @@
+/* Variable Assignments */
+
+$gray-dark: #424242;
+$green: #bdd78b;
+
+$fontFamily: 'Varela round', sans-serif;
+
+$transition: all 0.4s ease 0s;
+
+@mixin transition {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  transition: $transition;
+}
+
+/* Body */
+body {
+  color: lighten($gray-dark, 10%);
+  font-family: $fontFamily;
+}
+
+/* Back to Top Scroll */
+
+.scrollToTop {
+  width:90px; 
+  height:90px;
+  padding:10px; 
+  text-align:center; 
+  background-color: #ccc;
+  font-weight: light;
+  font-size: 12px;
+  color: #444;
+  text-decoration: none;
+  position:fixed;
+  bottom:7px;
+  right:1px;
+  display:none;
+  background: url("/img/arrowUp.png") no-repeat 10px 15px;  
+  span {
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    color: #ccc;
+  }
+}
+.scrollToTop:hover{
+  text-decoration:none;
+}
+
+/* Header */
+
+.header {
+    text-align: center;
+    padding-top: 150px;
+    //background-color: #fff;
+    //opacity: 0.4;
+}
+
+.homeBg {
+  background-image: url("/img/alphaBg2.jpg");
+  background-size: cover;
+
+  height: 645px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  background-position: center top;
+  //background-repeat: no-repeat;
+  //min-height: 645px;
+  h1 {
+    font-size: 40px; 
+    color: #fff; 
+    letter-spacing: 12px; 
+    margin: 10px;
+  }
+  h1 span {
+    color: #ebe7e7; 
+    display: inline-block;
+  }
+  p {
+    color: #fff; 
+    letter-spacing: 1px;
+  }
+}
+
+#container {
+    margin: 0 auto;
+}
+
+.main {
+    margin: 0 auto;
+    width: 70%;    
+}
+
+section {
+    padding-bottom: 40px;
+    padding-top: 130px;    
+}
+
+/* Navigation */
+
+nav {
+  //position: fixed;  
+  ul {
+    text-align: center;
+    //padding-bottom: 400px;
+
+    //border-bottom: 1px solid lighten($gray-dark, 65%);
+    //padding-bottom: 10px;
+    //box-shadow: 0 1.5px 2px 0 rgba(0, 0, 0, 0.20), 0 0 1px 1px rgba(255, 255, 255, 0.20) inset;
+    li {
+      display: inline-block;
+      margin-right: 60px;
+      text-decoration: none;
+      list-style: none;
+      .selected {
+        color: $green;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 15px;
+
+        &:hover {
+          opacity: 0.8;
+          @include transition;
+        }
+
+      }
+    }
+  }
+}
+
+nav ul .logo {
+  display: none;
+}
+
+nav ul.logo-shown {
+  float: right;
+}
+
+nav ul.sticky {
+  position: fixed;
+  width: 100%;
+  padding-top: 15px;
+  top: -20px;
+  text-align: right;
+  background-color: #fff;
+  //color: lighten($gray-dark, 15%);
+  @include transition;
+  border-bottom: 1px solid lighten($gray-dark, 65%);
+  padding-bottom: 10px;
+  box-shadow: 0 1.5px 2px 0 rgba(0, 0, 0, 0.20), 0 0 1px 1px rgba(255, 255, 255, 0.20) inset;
+  //font-size: 90%;
+  a {
+    color: lighten($gray-dark, 15%);
+  }
+
+  .selected {
+        color: #bdd78b;
+      }
+  
+}
+
+.browse {
+  margin-top: 250px;  
+}
+
+i {
+  color: #fff;
+  opacity: 0.8;
+}
+
+/* Parallax Effect */
+
+section.module.parallax {
+  height: 645px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+section.module.parallax-1 {
+  background-image: url("/img/alphaBg3.jpg");
+}
+
+.container h1 {
+  padding-top: 10%;
+  font-size: 400%;
+  font-weight: lighter;
+  text-align: center;
+  color: darken($green, 10%);
+  opacity: .5;
+}
+
+section.module.parallax-2 {
+  background-image: url("/img/alphaBg4.jpg");
+}
+
+.browse2 {
+  text-align: center;
+  i {
+  color: darken($green, 10%);
+  opacity: 0.7;
+  margin-top: 100px;
+  }
+}
+
+/* Mobile */
+/* media queries */
+
+@media screen and (max-width: 600px) {
+  .homeBg {
+    max-height: 450px;
+    background-position: 80% 90%;
+    h1 {
+      font-size: 150%;
+    }
+  }
+
+  nav {
+    display: none;
+  }
+
+  .browse {
+    margin-top: 100px;
+  }
+
+  .container h1 {
+   // font-size: 200%;
+  }
+
+  section.module.parallax-1 {
+  max-height: 400px;
+}
+
+section.module.parallax-2 {
+  max-height: 400px;
+}
+}
