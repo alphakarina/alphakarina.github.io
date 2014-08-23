@@ -94,6 +94,4 @@ activate :deploy do |deploy|
   deploy.branch = "master"
 end
 
-#activate :disqus do |d|
-#  d.shortname = "gamboajosephdgithubio"
-#end
+
