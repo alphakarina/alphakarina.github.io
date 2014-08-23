@@ -20,6 +20,12 @@ body {
   font-family: $fontFamily;
 }
 
+/* Remove dotted-outline on Firefox */
+
+a :active {
+  outline: 0 !important;  
+}
+
 /* Back to Top Scroll */
 
 .scrollToTop {
@@ -58,7 +64,7 @@ body {
 }
 
 .homeBg {
-  background-image: url("/img/alphaBg2.jpg");
+  background-image: url("/img/alphaBg1.jpg");
   background-size: cover;
 
   height: 645px;
@@ -95,8 +101,8 @@ body {
 }
 
 section {
-    padding-bottom: 40px;
-    padding-top: 130px;    
+    padding-bottom: 10%;
+    padding-top: 5%;    
 }
 
 /* Navigation */
@@ -117,6 +123,7 @@ nav {
       list-style: none;
       .selected {
         color: $green;
+        outline: 0;
       }
       a {
         text-decoration: none;
@@ -184,9 +191,23 @@ section.module.parallax {
 }
 
 section.module.parallax-1 {
-  background-image: url("/img/alphaBg3.jpg");
+  background-image: url("/img/skydive2.jpg");
 }
 
+.container h1 {
+  padding-top: 10%;
+  font-size: 400%;
+  font-weight: lighter;
+  text-align: center;
+  color: #fff;
+  opacity: .5;
+}
+
+section.module.parallax-2 {
+  background-image: url("/img/skydive1.jpg");
+}
+
+/*
 .container h1 {
   padding-top: 10%;
   font-size: 400%;
@@ -195,15 +216,15 @@ section.module.parallax-1 {
   color: darken($green, 10%);
   opacity: .5;
 }
-
-section.module.parallax-2 {
+*/
+section.module.parallax-3 {
   background-image: url("/img/alphaBg4.jpg");
 }
 
 .browse2 {
   text-align: center;
   i {
-  color: darken($green, 10%);
+  color: #fff;
   opacity: 0.7;
   margin-top: 100px;
   }
@@ -214,15 +235,25 @@ section.module.parallax-2 {
 
 @media screen and (max-width: 600px) {
   .homeBg {
-    max-height: 450px;
-    background-position: 80% 90%;
-    h1 {
-      font-size: 150%;
-    }
+    //position: absolute;
+    height: auto;
+    width: 100%;
+    //background-position: auto;
+    
   }
-
+  .header {
+    padding-bottom: 40%;
+  }
   nav {
     display: none;
+  }
+
+  section {
+    margin-bottom: 80px;
+  }
+
+  .main {
+    width: 90%;
   }
 
   .browse {
@@ -240,4 +271,39 @@ section.module.parallax-2 {
 section.module.parallax-2 {
   max-height: 400px;
 }
+}
+
+/*
+.social ul li{
+  display: inline-block;
+  padding-top: 2%;
+  
+  list-style: none;
+  margin-left: -4%;
+}
+*/
+.social {
+  
+  padding:50px; 
+  text-align:center; 
+ // margin-top: 100px;
+ // background-color: #ccc;
+  font-weight: light;
+  font-size: 12px;
+  color: #444;
+  text-decoration: none;
+ // position:fixed;
+  //bottom:7px;
+  //right:1px;
+  //display:none;
+   background: url("/img/email.png") no-repeat 1px 20px;  
+   
+  a {
+
+   margin-top: 40px;
+}
+}
+
+.submit :hover {
+  background-color: $green;
 }
