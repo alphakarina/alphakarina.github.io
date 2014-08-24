@@ -1,4 +1,5 @@
 // Back to Top Button
+//http://www.paulund.co.uk/how-to-create-an-animated-scroll-to-top-with-jquery
 
 $(document).ready(function(){
   
@@ -15,11 +16,11 @@ $(document).ready(function(){
   $('.scrollToTop').click(function(){
     $('html, body').animate({scrollTop : 0},800);
     return false;
-  });
-  
+  });  
 });
 
 // Single Page Scroll
+//http://anythinggraphic.net/sticky-navigation-and-scrolling/
 
 $(document).ready(function(){
 
@@ -45,22 +46,20 @@ $(document).ready(function(){
     
     $('body,html').animate({
     scrollTop: totalScroll
-    }, 700);
-  
+    }, 700);  
   }
-
 });
 
 //Sticky Nav Bar
 
 $(window).scroll(function() {
 if ($(this).scrollTop() > 600){  
-    $('nav ul').addClass("sticky logo-shown");   
+    $('nav ul').addClass("sticky");   
   }
   else{
     $(".selected").removeClass("selected");
     $(this).addClass("selected");
-    $('nav ul').removeClass("sticky logo-shown");
+    $('nav ul').removeClass("sticky");
   }
 });
 
