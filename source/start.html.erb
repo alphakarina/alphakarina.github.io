@@ -31,7 +31,7 @@ title: Get Started with Royale
 
 
     <div class="browse">
-        <a href="#packages">
+        <a href=".main">
         <i class="fa fa-chevron-circle-down fa-2x"></i></a>
     </div> 
 </section>
@@ -40,13 +40,63 @@ title: Get Started with Royale
  <%= partial "partials/nav"%> 
 </div> 
 
-
 <div class="main">
-  <section id="packages">
-  <h1>Choose from the following Packages</h1>  
-</section>
+  <h1>Choose from the following Packages</h1>   
+  <p>
+  Each package costs PhP 14,790.00 ( including PhP 300.00 Sub-Distributor Fee ). NO MEMBERSHIP FEES.</br></br>
+  All succeeding Package(s) will only cost PhP 12,800.00 ( Remember the 30% Lifetime Discount? )</br></br>
+  </p>
 
 </div><!--.main--> 
+
+<section id="packages">
+   
+
+  <div class="slider">
+    <ul>
+      <li> <%= image_tag "img1.jpg", class: "img1"%> </li>
+      <li> <%= image_tag "img2.jpg"%> </li>
+      <li> <%= image_tag "img3.jpg"%> </li>
+      <li> <%= image_tag "img4.jpg"%> </li>
+      <li> <%= image_tag "img5.jpg"%> </li>
+      <ul>
+  </div>
+
+  <div id="slider-nav">
+  <button data-dir="prev">Prev</button>
+  <button data-dir="next">Next</button>
+  </div>
+
+</section>
+
+<div class="main">
+  <h1>Ways to Earn</h1>   
+  <h2>Direct Selling</h2>
+  <p>
+This is pretty self-explanatory and simple. You sell an item, earn 20 - 30%.</br></br>
+THERE'S MORE TO IT! You will earn PhP 1,610.00 rebate for every product package you sell.
+  </p></br>
+
+  <h2>Leveraging Program</h2>
+  <p>
+In your IDTC ( Independent Distributor Tracking Center ), you will have two sales groups. 
+Let's call them TEAM A and TEAM B (Left and Right).</br></br>
+For every sale made under TEAM A and TEAM B worth 150PPV, the company will give you PhP 2,100.00 as your
+MATCH SALES BONUS. Positions don't matter; as long as the system sees a match, the MATCH SALES BONUS is yours!</br></br>
+  </p>
+
+</div><!--.main--> 
+
+<section id="channels">   
+
+  <div class="channels">
+    <ul>
+      <li> <%= image_tag "sell1.jpg", class: "sell1"%> </li>
+      <li> <%= image_tag "sell2.jpg", class: "sell2"%> </li>         
+      <ul>
+  </div>  
+</section>
+
 
 <a href="#" class="scrollToTop"><span>Back To Top</span></a> 
 

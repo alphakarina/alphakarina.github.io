@@ -17,14 +17,12 @@ $(document).ready(function(){
     $('html, body').animate({scrollTop : 0},800);
     return false;
   });  
-});
 
-// Single Page Scroll
-//http://anythinggraphic.net/sticky-navigation-and-scrolling/
 
-$(document).ready(function(){
+  // Single Page Scroll
+  //http://anythinggraphic.net/sticky-navigation-and-scrolling/
 
-  $('a').click(function(){
+   $('a').click(function(){
   
     var el = $(this).attr('href');
     var elWrapped = $(el);
@@ -48,20 +46,71 @@ $(document).ready(function(){
     scrollTop: totalScroll
     }, 700);  
   }
+
+  //Sticky Nav Bar
+
+  $(window).scroll(function() {
+  if ($(this).scrollTop() > 600){  
+      $('nav ul').addClass("sticky");   
+    }
+    else{
+      $(".selected").removeClass("selected");
+      $(this).addClass("selected");
+      $('nav ul').removeClass("sticky");
+    }
+  });
+
 });
 
-//Sticky Nav Bar
+ //Slider
+(function() {
+  var sliderUL = $('div.slider').css('overflow', 'hidden').children('ul'),
+    imgs = sliderUL.find('img'),
+    imgWidth = imgs[0].width, // 600
+    imgsLen = imgs.length, // 4
+    current = 1,
+    totalImgsWidth = imgsLen * imgWidth; // 2400
 
-$(window).scroll(function() {
-if ($(this).scrollTop() > 600){  
-    $('nav ul').addClass("sticky");   
-  }
-  else{
-    $(".selected").removeClass("selected");
-    $(this).addClass("selected");
-    $('nav ul').removeClass("sticky");
-  }
-});
+  $('#slider-nav').show().find('button').on('click', function() {
+    var direction = $(this).data('dir'),
+      loc = imgWidth; // 600
 
-//Slider
+    // update current value
+    ( direction === 'next' ) ? ++current : --current;
+
+    // if first image
+    if ( current === 0 ) {
+      current = imgsLen;
+      loc = totalImgsWidth - imgWidth; // 2400 - 600 = 1800
+      direction = 'next';
+    } else if ( current - 1 === imgsLen ) { // Are we at end? Should we reset?
+      current = 1;
+      loc = 0;
+    }
+
+    transition(sliderUL, loc, direction);
+  });
+
+  function transition( container, loc, direction ) {
+    var unit; // -= +=
+
+    if ( direction && loc !== 0 ) {
+      unit = ( direction === 'next' ) ? '-=' : '+=';
+    }
+
+    container.animate({
+      'margin-left': unit ? (unit + loc) : loc
+    });
+  }
+
+})();
+
+
+
+
+
+
+
+
+
 

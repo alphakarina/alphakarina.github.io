@@ -408,6 +408,106 @@ and (max-width: 1024px)
 
 /* Image Slider */
 
-/* Pending */
+#slider-nav { 
+  display: none; 
+  margin-top: 2em;
+}
+
+.slider ul {
+  width: 10000px;
+  list-style: none;
+  //padding-left: -10px;
+}
+
+#slider-nav button {
+  //padding: 1em;
+  margin-right: 1em;
+ // border-radius: 10px;
+  cursor: pointer;  
+  color: #fff;
+  //margin-top: 20px;
+  padding: 15px 25px 15px 25px;
+  background-color: darken($green, 20%);
+  border-radius: 3px;
+  //box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.20), 0 0 1px 1px rgba(255, 255, 255, 0.20) inset;
+
+  &:hover {
+    opacity: 0.85;
+    @include transition;
+  }
+}
+
+.slider {
+  max-width: 600px;
+  height: 480px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.slider li {
+  float: left;
+  img {
+    width: 600; 
+    height: 470;
+  }  
+}
+
+#packages {
+ text-align: center;
+}
+
+.img1 {
+  margin-left: -40px;
+}
+
+button {
+  font-family: $fontFamily;
+  border: 0;
+margin-top: -250px;
 
 
+  
+}
+
+input {
+  border: 0;  
+}
+
+button:first-child {
+    //position: relative;
+   // float: left;
+    //background-image: url("/img/prev.png") no-repeat 1px 1px;
+   //display: none;
+}
+
+button:last-child {
+ //  float:  right;
+}
+
+#packages {
+  background-image: url("/img/royale1.jpg");
+  background-size: cover;
+  max-height: 500px;
+  width: 100%;
+  background-attachment: fixed;
+}
+
+.channels ul {
+  list-style: none;
+  height: 550px;
+}
+
+.channels ul li {
+  margin-left: 5%;
+  float: left;
+  padding: 5px;
+  height: 500px;
+}
+
+#channels {
+  background-image: url("/img/royale1.jpg");
+  background-size: cover;
+  height: auto;
+  width: 100%;
+  background-attachment: fixed;
+}
