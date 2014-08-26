@@ -63,3 +63,5 @@ if ($(this).scrollTop() > 600){
   }
 });
 
+//Slider
+

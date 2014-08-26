@@ -27,6 +27,25 @@ a :active {
   outline: 0 !important;  
 }
 
+/* Buttons */
+
+.main h3 a {
+  text-decoration: none;
+  list-style-type: none;
+  color: #fff;
+  //margin-top: 20px;
+  padding: 15px 25px 15px 25px;
+  background-color: darken($green, 20%);
+  border-radius: 3px;
+  //box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.20), 0 0 1px 1px rgba(255, 255, 255, 0.20) inset;
+
+  &:hover {
+    opacity: 0.85;
+    @include transition;
+  }
+}
+
+
 /* Back to Top Scroll */
 
 .scrollToTop {
@@ -134,14 +153,6 @@ nav {
   }
 }
 
-nav ul .logo {
-  display: none;
-}
-
-nav ul.logo-shown {
-  float: right;
-}
-
 nav ul.sticky {
   position: fixed;
   width: 100%;
@@ -231,10 +242,33 @@ section.module.parallax-3 {
   background-color: $green;
 }
 
+/* Get Started Section */
+
+
+
+
+/*
+.homeLink {
+  margin: -30px 0 80px 20px;
+  
+
+  top: 0;
+  h3 a {
+    color: #fff;
+    padding: 10px 25px 10px 25px;
+    list-style-type: none;
+    text-decoration: none;
+     background-color: lighten($green, 10%);
+  }
+}
+*/
+
+
+
 /* Mobile */
 /* media queries */
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 767px) {
   .homeBg {
     background-size: 451%;    
     max-height: 500px;    
@@ -246,8 +280,12 @@ section.module.parallax-3 {
     padding-bottom: -40%;
   }
 
-  nav {
-    display: none;
+  nav ul.sticky {
+    text-align: center;
+  }
+
+  nav ul li {
+    margin-right: 14%;
   }
 
   section.module.parallax-1 {
@@ -271,9 +309,9 @@ section.module.parallax-3 {
   }
 
   section {
-    margin-bottom: 1%;
+    margin-bottom: 5%;
     padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: 5%;
   }
 
   .main {
@@ -289,5 +327,85 @@ section.module.parallax-3 {
   }
 }
 
+@media screen 
+and (min-width: 768px)
+and (max-width: 1024px)
+{
+    section.module.parallax-1 {
+    background-size: 200%;
+    background-attachment: scroll;
+  }
+
+  section.module.parallax-2 {
+    background-size: 200%;
+    background-attachment: scroll;
+  }
+
+  section.module.parallax-3 {
+    background-size: 200%;
+    background-position: left bottom;
+    background-attachment: scroll;
+  }
+
+  .homeBg {
+    background-size: 250%;         
+    background-position: 95% 5%;
+    background-attachment: scroll;    
+  }
+}
+
+
+.startHeader {
+  background-image: url("/img/flower2.jpg");
+  background-size: cover;
+  height: 645px;
+  background-position: 30% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;  
+}
+
+.startCont {
+  padding: 20px;
+  margin: 0 10px 0 10px;
+  max-width: 500px;
+  max-height: 500px;
+  text-align: center;
+  //background-color: lighten($green, 20%);
+  //opacity: 0.3;
+ h1 {
+  letter-spacing: 10px;
+  font-size: 35px;
+  padding: 1px;
+  color: #ccc;
+  span {
+    color: #fff;
+    font-size: 50px;
+  }
+  
+ }
+
+ h2 {
+  color: #fff;
+ }
+ p {
+  color: #fff;
+  text-align: left;
+  margin-left: 40px;
+  line-height: 150%;
+ }
+}
+
+.homeLink nav ul li  {
+  text-indent: -999px;
+
+}
+
+.browse {
+  text-align: center;
+  margin-top: 0;
+}
+
+/* Image Slider */
 
 
