@@ -526,3 +526,13 @@ button:last-child {
   width: 100%;
   background-attachment: fixed;
 }
+
+.main a {
+  text-decoration: none;
+  color: lighten($gray-dark, 10%);
+  font-size: 25px;
+  span {
+    font-size: 13px;
+    color: darken($green, 5%);
+  }
+}
