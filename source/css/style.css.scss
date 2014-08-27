@@ -376,8 +376,10 @@ and (max-width: 1024px)
  h1 {
   letter-spacing: 10px;
   font-size: 35px;
-  padding: 1px;
-  color: #ccc;
+  background-color: darken($green, 18%);
+  border-radius: 3px;
+  padding: 5px;
+  color: lighten($gray-dark, 68%);
   span {
     color: #fff;
     font-size: 50px;
@@ -386,7 +388,7 @@ and (max-width: 1024px)
  }
 
  h2 {
-  color: #fff;
+  color: #fff; 
  }
  p {
   color: #fff;
@@ -414,7 +416,7 @@ and (max-width: 1024px)
 }
 
 .slider ul {
-  width: 5000px;
+  width: 3500px;
   list-style: none;
   //padding-left: -10px;
 }
