@@ -60,50 +60,47 @@ $(document).ready(function(){
     }
   });
 
+    //Slider
+
+  (function() {
+      var container = $('div.slider').css('overflow', 'hidden').children('ul'),
+        slider = new Slider( container, $('#slider-nav') );
+
+      slider.nav.find('button').on('click', function() {
+        slider.setCurrent( $(this).data('dir') );
+        slider.transition();
+      });                 
+
+    function Slider( container, nav ) {
+      this.container = container;
+      this.nav = nav.show();
+
+      this.imgs = this.container.find('img');
+      this.imgWidth = this.imgs[0].width; // 600
+      this.imgsLen = this.imgs.length;
+
+      this.current = 0;
+    }
+
+    Slider.prototype.transition = function( coords ) {
+      this.container.animate({
+        'margin-left': coords || -( this.current * this.imgWidth )
+      });
+    };
+
+    Slider.prototype.setCurrent = function( dir ) {
+      var pos = this.current;
+
+      pos += ( ~~( dir === 'next' ) || -1 );
+      this.current = ( pos < 0 ) ? this.imgsLen - 1 : pos % this.imgsLen;
+
+      return pos;
+    }; 
+  })();  
+     
 });
 
- //Slider
-(function() {
-  var sliderUL = $('div.slider').css('overflow', 'hidden').children('ul'),
-    imgs = sliderUL.find('img'),
-    imgWidth = imgs[0].width, // 600
-    imgsLen = imgs.length, // 4
-    current = 1,
-    totalImgsWidth = imgsLen * imgWidth; // 2400
 
-  $('#slider-nav').show().find('button').on('click', function() {
-    var direction = $(this).data('dir'),
-      loc = imgWidth; // 600
-
-    // update current value
-    ( direction === 'next' ) ? ++current : --current;
-
-    // if first image
-    if ( current === 0 ) {
-      current = imgsLen;
-      loc = totalImgsWidth - imgWidth; // 2400 - 600 = 1800
-      direction = 'next';
-    } else if ( current - 1 === imgsLen ) { // Are we at end? Should we reset?
-      current = 1;
-      loc = 0;
-    }
-
-    transition(sliderUL, loc, direction);
-  });
-
-  function transition( container, loc, direction ) {
-    var unit; // -= +=
-
-    if ( direction && loc !== 0 ) {
-      unit = ( direction === 'next' ) ? '-=' : '+=';
-    }
-
-    container.animate({
-      'margin-left': unit ? (unit + loc) : loc
-    });
-  }
-
-})();
 
 
 

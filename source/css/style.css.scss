@@ -4,6 +4,7 @@ $gray-dark: #424242;
 $green: #bdd78b;
 
 $fontFamily: 'Varela round', sans-serif;
+$puritan: 'Puritan', sans-serif;
 
 $transition: all 0.4s ease 0s;
 
@@ -174,7 +175,7 @@ nav ul.sticky {
   }  
 }
 
-.browse {
+.browseSvg {
   margin-top: 250px;  
 }
 
@@ -365,10 +366,14 @@ and (max-width: 1024px)
   background-position: center top;  
 }
 
+.title {
+ // margin-top: 50px;
+}
+
 .startCont {
   padding: 20px;
   margin: 0 10px 0 10px;
-  max-width: 500px;
+  max-width: 550px;
   max-height: 500px;
   text-align: center;
   //background-color: lighten($green, 20%);
@@ -376,6 +381,7 @@ and (max-width: 1024px)
  h1 {
   letter-spacing: 10px;
   font-size: 35px;
+  //font-family: $roboto;
   background-color: darken($green, 18%);
   border-radius: 3px;
   padding: 5px;
@@ -404,10 +410,17 @@ and (max-width: 1024px)
 }
 
 .browse {
-  text-align: center;
-  margin-top: 0;
+text-align: center;
+ margin-top: 110px;
 }
 
+.main h1 {
+ //font-family: $puritan;
+}
+
+.main p {
+ //font-family: $puritan;
+}
 /* Image Slider */
 
 #slider-nav { 
@@ -442,7 +455,7 @@ and (max-width: 1024px)
 .slider {
   max-width: 600px;
   height: 480px;
-  overflow: hidden;
+  overflow: scroll;
   margin: 0 auto;
 }
 
