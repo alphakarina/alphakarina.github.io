@@ -226,7 +226,7 @@ section.module.parallax-3 {
 }
 
 .contactIcons {
-  width: 500px;  
+  //width: 500px;  
 }
 
 #contact a {
@@ -236,14 +236,14 @@ section.module.parallax-3 {
 }
 
 .email {
-  height: 100px;
-  width: 100px;
+  //height: 100px;
+  //width: 100px;
   background: url("/img/envelopeSmall.png") no-repeat 0px 20px;    
 }
 
 .mobile {
-  height: 100px;
-  width: 100px;
+ // height: 100px;
+ // width: 100px;
   //top: 10px;
   background:  url("/img/mobile.png") no-repeat 0px 20px;
  padding: 20px;
@@ -254,8 +254,8 @@ section.module.parallax-3 {
 }
 
 .fb {
-  height: 100px; 
-  width: 100px;
+ // height: 100px; 
+ // width: 100px;
   background:  url("/img/facebook.jpg") no-repeat 0 20px;
   padding: 40px;
 }
@@ -418,6 +418,10 @@ text-align: center;
 @media screen and (max-width: 767px) {
   //Start Page
 
+  .mobile {
+    padding: 5px;
+  }
+
   //Home Page
   .homeBg {
     background-size: 451%;    
@@ -431,9 +435,10 @@ text-align: center;
   }
 
   .startHeader {
-    background-size: 450%;
+    background-size: 650%;
     height: 700px;
-    background-position: 10% 5%
+    background-position: 10% 5%;
+    background-attachment: scroll;
   }
 
   .startCont {
