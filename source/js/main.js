@@ -78,10 +78,10 @@ $(document).ready(function(){
   });
 
   $('#slider3').bxSlider({
-    //auto: true,
+    auto: true,
     captions: true,
-    //autoControls: true,
-    //pause: 3000,
+    autoControls: true,
+    pause: 5000,
     //slideMargin: 20
   });
 
