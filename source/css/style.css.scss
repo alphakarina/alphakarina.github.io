@@ -285,10 +285,6 @@ section.module.parallax-3 {
 }
 */
 
-
-
-
-
 /* Start Page */
 
 .startHeader {
@@ -426,7 +422,7 @@ text-align: center;
   .homeBg {
     background-size: 451%;    
     max-height: 500px;    
-    background-position: 90% 5%;
+    background-position: 85% 5%;
     background-attachment: scroll;    
   }
 
@@ -464,7 +460,7 @@ text-align: center;
       font-size: 15px;
     }
     p {
-      font-size: 10px !important;
+      font-size: 10px;
     }
   }
  }
@@ -478,14 +474,42 @@ text-align: center;
  }
 
 .browseSvg {
-  margin-top: 0px;  
+  margin-top: 80px;  
  }
+
+ .contactIcons {
+  margin-bottom: 80px;  
+}
+
+#contact a {
+  font-size: 50px;
+  text-indent: -999px;
+  padding: 40px; 
+}
+
+/*
+
+.email {  
+  background: url("/img/envelopeSmall.png") no-repeat 0px 10px;    
+}
+
+.mobile { 
+background:  url("/img/mobile.png") no-repeat 0px 10px;
+ padding: 10px;  
+}
+
+.fb { 
+  background:  url("/img/facebook.jpg") no-repeat 0 10px;
+  padding: 40px;
+}
+
+*/
 
 
   
 
   nav ul.sticky {
-    display: none;
+    text-align: right;
   }
 
   nav ul li {
@@ -521,8 +545,8 @@ text-align: center;
   .main {
     width: 75%;
     h3 a {
-      font-size: 15px;
-      padding: 10px 15px 10px 15px;
+      font-size: .92em;
+      padding: 10px;
     }
   }
 
