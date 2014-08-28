@@ -156,6 +156,7 @@ nav {
 
 nav ul.sticky {
   position: fixed;
+  z-index: 10000;
   width: 100%;
   padding-top: 15px;
   top: -20px;
@@ -218,7 +219,7 @@ section.module.parallax-3 {
 .browse2 {
   text-align: center;
   i {
-    color: #fff;
+    //color: #fff;
     opacity: 0.7;
     margin-top: 100px;
   }
@@ -355,6 +356,7 @@ and (max-width: 1024px)
   }
 }
 
+/* Start Page */
 
 .startHeader {
   background-image: url("/img/flower2.jpg");
@@ -414,92 +416,11 @@ text-align: center;
  margin-top: 110px;
 }
 
-.main h1 {
- //font-family: $puritan;
-}
-
-.main p {
- //font-family: $puritan;
-}
-/* Image Slider */
-
-#slider-nav { 
-  display: none; 
-  margin-top: 2em;
-}
-
-.slider ul {
-  width: 3500px;
-  list-style: none;
-  //padding-left: -10px;
-}
-
-#slider-nav button {
-  //padding: 1em;
-  margin-right: 1em;
- // border-radius: 10px;
-  cursor: pointer;  
-  color: #fff;
-  //margin-top: 20px;
-  padding: 15px 25px 15px 25px;
-  background-color: darken($green, 20%);
-  border-radius: 3px;
-  //box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.20), 0 0 1px 1px rgba(255, 255, 255, 0.20) inset;
-
-  &:hover {
-    opacity: 0.85;
-    @include transition;
-  }
-}
-
-.slider {
-  max-width: 600px;
-  height: 480px;
-  overflow: scroll;
-  margin: 0 auto;
-}
-
-.slider li {
-  float: left;
-  img {
-    width: 600; 
-    height: 470;
-  }  
-}
-
-#packages {
- text-align: center;
-}
-
-.img1 {
-  margin-left: -40px;
-}
-
-button {
-  font-family: $fontFamily;
-  border: 0;
-margin-top: -250px;
 
 
-  
-}
 
-input {
-  border: 0;  
-}
 
-button:first-child {
-    //position: relative;
-   // float: left;
-    //background-image: url("/img/prev.png") no-repeat 1px 1px;
-   //display: none;
-}
-
-button:last-child {
- //  float:  right;
-}
-
-#packages {
+.slideCont {
   background-image: url("/img/royale1.jpg");
   background-size: cover;
   max-height: 500px;
@@ -535,4 +456,25 @@ button:last-child {
     font-size: 13px;
     color: darken($green, 5%);
   }
+}
+
+// Slider
+
+.sliderBg {
+  background-image: url("/img/royale1.jpg");
+  background-size: cover;
+  //max-height: 500px;
+  width: 100%;
+  background-attachment: fixed;
+}
+
+.sliderCont {
+  max-width: 600px;
+  height: 520px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.bx-wrapper, .bx-viewport {
+  //padding-top: 20px;
 }

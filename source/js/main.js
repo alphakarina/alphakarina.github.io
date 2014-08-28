@@ -2,6 +2,8 @@
 //http://www.paulund.co.uk/how-to-create-an-animated-scroll-to-top-with-jquery
 
 $(document).ready(function(){
+
+  $('.bxslider').bxSlider();
   
   //Check to see if the window is top if not then display button
   $(window).scroll(function(){
@@ -58,47 +60,37 @@ $(document).ready(function(){
       $(this).addClass("selected");
       $('nav ul').removeClass("sticky");
     }
+  }); 
+
+  $('#slider1').bxSlider({
+    auto: true,
+    //autoControls: true,
+    pause: 3000,
+    //slideMargin: 20
   });
 
-    //Slider
+  $('#slider2').bxSlider({
+    auto: true,
+    //captions: true,
+    //autoControls: true,
+    pause: 3000,
+    //slideMargin: 20
+  });
 
-  (function() {
-      var container = $('div.slider').css('overflow', 'hidden').children('ul'),
-        slider = new Slider( container, $('#slider-nav') );
+  $('#slider3').bxSlider({
+    //auto: true,
+    captions: true,
+    //autoControls: true,
+    //pause: 3000,
+    //slideMargin: 20
+  });
 
-      slider.nav.find('button').on('click', function() {
-        slider.setCurrent( $(this).data('dir') );
-        slider.transition();
-      });                 
 
-    function Slider( container, nav ) {
-      this.container = container;
-      this.nav = nav.show();
-
-      this.imgs = this.container.find('img');
-      this.imgWidth = this.imgs[0].width; // 600
-      this.imgsLen = this.imgs.length;
-
-      this.current = 0;
-    }
-
-    Slider.prototype.transition = function( coords ) {
-      this.container.animate({
-        'margin-left': coords || -( this.current * this.imgWidth )
-      });
-    };
-
-    Slider.prototype.setCurrent = function( dir ) {
-      var pos = this.current;
-
-      pos += ( ~~( dir === 'next' ) || -1 );
-      this.current = ( pos < 0 ) ? this.imgsLen - 1 : pos % this.imgsLen;
-
-      return pos;
-    }; 
-  })();  
-     
 });
+
+//Slider
+
+
 
 
 
