@@ -81,6 +81,9 @@ activate :directory_indexes
 set :relative_links, true
 
 activate :syntax
+
+page "/404.html", directory_indexes: false
+
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, 
                :smartypants => true,
