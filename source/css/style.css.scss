@@ -22,6 +22,25 @@ body {
   font-family: $fontFamily;
 }
 
+#container {
+  margin: 0 auto;
+}
+
+.main {
+  margin: 0 auto;
+  width: 70%;    
+}
+
+section {
+  padding-bottom: 10%;
+  padding-top: 5%;    
+}
+
+.main p {
+  line-height: 170%;  
+}
+
+
 /* Remove dotted-outline on Firefox */
 
 a :active {
@@ -30,19 +49,20 @@ a :active {
 
 /* Buttons */
 
-.main h3 a {
-  text-decoration: none;
-  list-style-type: none;
-  color: #fff;
-  //margin-top: 20px;
-  padding: 15px 25px 15px 25px;
-  background-color: darken($green, 20%);
-  border-radius: 3px;
-  //box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.20), 0 0 1px 1px rgba(255, 255, 255, 0.20) inset;
+.main h3 {
+  margin-top: 40px;
+    a {
+    text-decoration: none;
+    list-style-type: none;
+    color: #fff;  
+    padding: 15px 25px 15px 25px;
+    background-color: darken($green, 20%);
+    border-radius: 3px;  
 
-  &:hover {
-    opacity: 0.85;
-    @include transition;
+    &:hover {
+      opacity: 0.85;
+      @include transition;
+    }
   }
 }
 
@@ -109,19 +129,6 @@ a :active {
   }
 }
 
-#container {
-  margin: 0 auto;
-}
-
-.main {
-  margin: 0 auto;
-  width: 70%;    
-}
-
-section {
-  padding-bottom: 10%;
-  padding-top: 5%;    
-}
 
 /* Navigation */
 
@@ -218,15 +225,14 @@ section.module.parallax-3 {
 
 .browse2 {
   text-align: center;
-  i {
-    //color: #fff;
+  i {   
     opacity: 0.7;
     margin-top: 100px;
   }
 }
 
 .contactIcons {
-  //width: 500px;  
+  margin-top: 50px;  
 }
 
 #contact a {
@@ -235,27 +241,20 @@ section.module.parallax-3 {
   padding: 50px; 
 }
 
-.email {
-  //height: 100px;
-  //width: 100px;
+.email {  
   background: url("/img/envelopeSmall.png") no-repeat 0px 20px;    
 }
 
-.mobile {
- // height: 100px;
- // width: 100px;
-  //top: 10px;
+.mobile { 
   background:  url("/img/mobile.png") no-repeat 0px 20px;
- padding: 20px;
+  padding: 20px;
   a {
     text-align: right;
     font-size: 10px;
   }
 }
 
-.fb {
- // height: 100px; 
- // width: 100px;
+.fb { 
   background:  url("/img/facebook.jpg") no-repeat 0 20px;
   padding: 40px;
 }
@@ -264,28 +263,7 @@ section.module.parallax-3 {
   background-color: $green;
 }
 
-/* Get Started Section */
-
-
-
-
-/*
-.homeLink {
-  margin: -30px 0 80px 20px;
-  
-
-  top: 0;
-  h3 a {
-    color: #fff;
-    padding: 10px 25px 10px 25px;
-    list-style-type: none;
-    text-decoration: none;
-     background-color: lighten($green, 10%);
-  }
-}
-*/
-
-/* Start Page */
+/* Get Started Page */
 
 .startHeader {
   background-image: url("/img/flower2.jpg");
@@ -297,22 +275,16 @@ section.module.parallax-3 {
   background-position: center top;  
 }
 
-.title {
- // margin-top: 50px;
-}
-
 .startCont {
   padding: 20px;
   margin: 0 10px 0 10px;
   max-width: 550px;
   max-height: 500px;
   text-align: center;
-  //background-color: lighten($green, 20%);
-  //opacity: 0.3;
+ 
  h1 {
   letter-spacing: 10px;
-  font-size: 35px;
-  //font-family: $roboto;
+  font-size: 35px;  
   background-color: darken($green, 18%);
   border-radius: 3px;
   padding: 5px;
@@ -344,10 +316,6 @@ section.module.parallax-3 {
 text-align: center;
  margin-top: 110px;
 }
-
-
-
-
 
 .slideCont {
   background-image: url("/img/royale1.jpg");
@@ -404,9 +372,7 @@ text-align: center;
   padding-top: 20px;
 }
 
-.bx-wrapper, .bx-viewport {
-  //padding-top: 20px;
-}
+
 
 /* Mobile */
 /* media queries */
@@ -414,11 +380,40 @@ text-align: center;
 @media screen and (max-width: 767px) {
   //Start Page
 
+  //Body
+
+  .main {
+    h1 {
+      font-size: 150%;
+      line-height: 120%;
+      padding-top: 5%;
+    }
+
+    h2 {
+      font-size: 120%;
+    }
+    h3 {
+      font-size: 100%;
+    }
+    p {
+      font-size: 80%;
+    }
+    a {
+
+      font-size: 100%;
+
+      span {
+        font-size: 60%;
+      }
+    }
+  }
+
   .mobile {
     padding: 5px;
   }
 
   //Home Page
+  
   .homeBg {
     background-size: 451%;    
     max-height: 500px;    
@@ -437,76 +432,51 @@ text-align: center;
     background-attachment: scroll;
   }
 
-  .startCont {
-  //padding: 20px;
-  //margin: 0 10px 0 10px;
-  max-width: 550px;
-  max-height: 500px;
-  text-align: left; 
-   h1 {
-    //letter-spacing: 10px;
-    font-size: 15px;
-    //font-family: $roboto;
-    background-color: darken($green, 18%);
-    border-radius: 3px;
-    padding: 5px 10px 5px 10px;
-    color: lighten($gray-dark, 68%);
-    span {
-      color: #fff;
-      font-size: 20px;
-      margin-left: 35px;      
-    }
-    h2 {
-      font-size: 15px;
-    }
-    p {
-      font-size: 10px;
+  .startCont {  
+    max-width: 550px;
+    max-height: 500px;
+    text-align: left; 
+     h1 {    
+      font-size: 15px;    
+      background-color: darken($green, 18%);
+      border-radius: 3px;
+      padding: 5px 10px 5px 10px;
+      color: lighten($gray-dark, 68%);
+      span {
+        color: #fff;
+        font-size: 20px;
+        margin-left: 35px;      
+      }
+      h2 {
+        font-size: 15px;
+      }
+      p {
+        font-size: 10px;
+      }
     }
   }
- }
 
- .sliderCont {
-  height: 100%;
- }
+  .sliderCont {
+    height: 100%;
+  }
 
- .browse i{
- margin-top: 20px;
- }
+  .browse i{
+   margin-top: 20px;
+  }
 
-.browseSvg {
-  margin-top: 80px;  
- }
+  .browseSvg {
+    margin-top: 80px;  
+  }
 
- .contactIcons {
-  margin-bottom: 80px;  
-}
+  .contactIcons {
+    margin-bottom: 80px;  
+  }
 
-#contact a {
-  font-size: 50px;
-  text-indent: -999px;
-  padding: 40px; 
-}
-
-/*
-
-.email {  
-  background: url("/img/envelopeSmall.png") no-repeat 0px 10px;    
-}
-
-.mobile { 
-background:  url("/img/mobile.png") no-repeat 0px 10px;
- padding: 10px;  
-}
-
-.fb { 
-  background:  url("/img/facebook.jpg") no-repeat 0 10px;
-  padding: 40px;
-}
-
-*/
-
-
-  
+  #contact a {
+    font-size: 50px;
+    text-indent: -999px;
+    padding: 40px; 
+  }
 
   nav ul.sticky {
     text-align: right;
