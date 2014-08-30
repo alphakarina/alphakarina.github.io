@@ -525,6 +525,10 @@ text-align: center;
   .container {
    display: none;
   }
+
+  .sliderBg {
+    background-size: 240%;
+  }
 }
 
 @media screen 
@@ -604,6 +608,10 @@ and (max-width: 1024px)
         font-size: 60%;
       }
     }
+  }
+
+  .sliderBg {
+    background-size: 240%;
   }
   
 }
