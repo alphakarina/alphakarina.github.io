@@ -554,4 +554,21 @@ and (max-width: 1024px)
     background-position: 95% 5%;
     background-attachment: scroll;    
   }
+
+  .contactIcons {
+    margin-bottom: 80px;  
+  }
+
+  #contact a {
+    font-size: 50px;
+    text-indent: -999px;
+    padding: 40px; 
+  }
+
+  .startHeader {
+    background-size: 250%;
+    //height: 700px;
+    background-position: 12% 30%;
+    background-attachment: scroll;
+  }
 }
