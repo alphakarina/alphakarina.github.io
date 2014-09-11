@@ -2,13 +2,12 @@
 title: Alpha Karina
 ---
 <div id="container">
-
-  <div class="homeBg">
+  <div class="homeBg" data-stellar-background-ratio=".25">
     <div class="header">
 
       <nav>
-        <ul>               
-          <li><a href="#notes">Notes</a></li>
+        <ul>
+          <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -16,11 +15,12 @@ title: Alpha Karina
     
       <div>
         <h1 >ALPHA<span>KARINA</span></h1>
+        <%= image_tag "alphaHeader.jpg", class: "img-alpha" %> 
         <p>Livin' the Royale Dream</p>
       </div>
 
       <div class="browseSvg">
-        <a href="#testimonials">
+        <a href="#royale">
         <i class="fa fa-chevron-circle-down fa-2x"></i></a>
       </div>      
     </div><!--.header-->
@@ -28,7 +28,7 @@ title: Alpha Karina
 
   <div class="main">
 
-    <section id="testimonials">
+    <section id="royale">
 
       <h1>My Royale Story</h1>
       <p>
@@ -47,31 +47,82 @@ title: Alpha Karina
     </section>
   </div><!--.main-->  
 
-  <section class="module parallax parallax-1">
+  <section class="module parallax parallax-1" data-stellar-background-ratio=".25">
 
     <div class="container">  
       <h1>#Free<span>Falling</span></h1>        
         <div class="browse2">
-          <a href="#notes">
+          <a href="#testimonials">
           <i class="fa fa-chevron-circle-down fa-3x"></i></a>
         </div>
     </div><!--.container-->  
 
   </section>
         
-  <div class="main">
-    <section id="notes">
-      <h1>Notes</h1>
+  <div class="testimonials-section center-cont">
+    <section id="testimonials">
+      <h1>Testimonials</h1>
       <p>
-          This is still a work in Progress. Please check soon to read stories of other people's success with Royale.
+          Thousands of OFWs are already enjoying the privileges of being a Royalist. Now it's your turn.
       </p>
+
+      <div class="testi-lightbox">
+        <div class="table">
+          <ul>
+
+            <li> 
+                    
+                <ul>
+                  <li><a href="/img/bef-1.jpg" data-lightbox="before"><%= image_tag "bef-1.jpg", class: "testi-img" %><span>Before/After Photos</span></a></li>
+                  <li><a href="/img/bef-2.jpg" data-lightbox="before" style="display: none;">2</a></li>
+                  <li><a href="/img/bef-3.jpg" data-lightbox="before" style="display: none;">3</a></li>
+                  <li><a href="/img/bef-4.jpg" data-lightbox="before" style="display: none;">4</a></li>
+                  <li><a href="/img/bef-5.jpg" data-lightbox="before" style="display: none;">5</a></li>
+                </ul>
+                        
+            </li>
+
+              
+                <li>
+                 
+                    <ul>
+                  <li><a href="/img/success-1.jpg" data-lightbox="success"><%= image_tag "success-thumb.jpg", class: "testi-img" %><span class="testi-span">Success Stories</span></a></li>
+                  <li><a href="/img/success-2.jpg" data-lightbox="success" style="display: none;"></a></li>
+                  <li><a href="/img/success-3.jpg" data-lightbox="success" style="display: none;"></a></li>
+                  <li><a href="/img/success-4.jpg" data-lightbox="success" style="display: none;"></a></li>
+                  <li><a href="/img/success-5.jpg" data-lightbox="success" style="display: none;"></a></li>
+                  <li><a href="/img/success-6.jpg" data-lightbox="success" style="display: none;"></a></li>
+                  <li><a href="/img/success-7.jpg" data-lightbox="success" style="display: none;"></a></li>
+                  <li><a href="/img/success-8.jpg" data-lightbox="success" style="display: none;"></a></li>
+                  </ul>
+                             
+              </li>  
+               
+            <li>       
+             
+                <ul>
+                  <li><a href="/img/int-1.jpg" data-lightbox="int"><%= image_tag "int-1.jpg", class: "testi-img" %><span>International Distributors</span></a></li>
+                  <li><a href="/img/int-2.jpg" data-lightbox="int" style="display: none;">2</a></li>
+                  <li><a href="/img/int-3.jpg" data-lightbox="int" style="display: none;">3</a></li>
+                  <li><a href="/img/int-4.jpg" data-lightbox="int" style="display: none;">4</a></li>
+                  <li><a href="/img/int-5.jpg" data-lightbox="int" style="display: none;">5</a></li>
+                  <li><a href="/img/int-6.jpg" data-lightbox="int" style="display: none;">6</a></li>
+                  <li><a href="/img/int-7.jpg" data-lightbox="int" style="display: none;">7</a></li>
+                  
+                </ul>
+              
+            </li>
+
+          </ul>
+        </div>
+      </div>
 
       <%= partial "partials/notes"%> 
 
     </section>
   </div><!--.main-->  
 
-  <section class="module parallax parallax-2">
+  <section class="module parallax parallax-2" data-stellar-background-ratio=".25">
     <div class="container">  
       <h1>#Team<span>Happy</span></h1>
       <div class="browse2">
@@ -101,7 +152,7 @@ title: Alpha Karina
     </section>
   </div><!--.main-->  
 
-  <section class="module parallax parallax-3">
+  <section class="module parallax parallax-3" data-stellar-background-ratio=".25">
     <div class="container">  
       <h1>#Flower<span>Power</span></h1>
       <div class="browse2">
@@ -112,7 +163,7 @@ title: Alpha Karina
   </section>
           
               
-  <div class="main">            
+  <div class="main center-cont">            
     <section id="contact">
       <h1>Contact</h1>
 

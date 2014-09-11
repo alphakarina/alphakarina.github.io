@@ -3,7 +3,7 @@
 
 $(document).ready(function(){
 
-  $('.bxslider').bxSlider();
+  $('.bxslider').bxSlider();  
   
   //Check to see if the window is top if not then display button
   $(window).scroll(function(){
@@ -88,7 +88,35 @@ $(document).ready(function(){
 
 });
 
-//Slider
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+jQuery(document).ready(function(){
+    if( !isMobile.any() ){
+        $(window).stellar({
+        horizontalOffset: 50,
+        verticalOffset: 150,
+        positionProperty: 'transform'
+      });;
+    }
+});
 
 
 
