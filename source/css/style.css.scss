@@ -5,7 +5,6 @@ $green: #bdd78b;
 
 $fontFamily: 'Varela round', sans-serif;
 $font: Georgia, Times, serif;
-$puritan: 'Puritan', sans-serif;
 
 $transition: all 0.4s ease 0s;
 
@@ -25,7 +24,7 @@ body {
   h1 {
     text-transform: uppercase;
     text-align: center;
-    font-family: 'Roboto';
+    font-family: $fontFamily;
     letter-spacing: 0.15em;
     font-size: 1.9em;
     font-weight: bold;
@@ -325,31 +324,30 @@ section.module.parallax-3 {
 }
 
 .contactIcons {
-  margin-top: 50px;  
+  text-align: center;
+  padding-top: 20px;
+
+  ul {
+    margin-left: -20px;
+    li {
+      list-style-type: none;
+      display: inline-block; 
+      padding-right: 40px;
+      a i {
+        color: darken($green, 30%);
+        font-size: 30px;
+        &:hover {
+          opacity: 0.80;
+          @include transition;
+          color: darken($green, 10%);
+        }
+      }
+    }
+  } 
 }
 
-#contact a {
-  font-size: 50px;
-  text-indent: -999px;
-  padding: 50px; 
-}
-
-.email {  
-  background: url("/img/envelopeSmall.png") no-repeat 0px 20px;    
-}
-
-.mobile { 
-  background:  url("/img/mobile.png") no-repeat 0px 20px;
-  padding: 20px;
-  a {
-    text-align: right;
-    font-size: 10px;
-  }
-}
-
-.fb { 
-  background:  url("/img/facebook.jpg") no-repeat 0 20px;
-  padding: 40px;
+.fa-facebook:hover {
+  color: #38549a !important;
 }
 
 .submit :hover {
@@ -458,7 +456,7 @@ text-align: center;
   }
 }
 
-// Slider
+/* Slider */
 
 .sliderBg {
   background-image: url("/img/royale1.jpg");
@@ -479,9 +477,7 @@ text-align: center;
 /* media queries */
 
 @media screen and (max-width: 767px) {
-  //Start Page
-
-  //Body
+ /*  Start Page, Body */
 
   .main {
     h1 {
@@ -511,11 +507,24 @@ text-align: center;
     
   }
 
-  .mobile {
-    padding: 5px;
-  }
+  .contactIcons {
+    text-align: center;
+    padding-top: 20px;
 
-  //Testimonials 
+    ul {
+      margin-left: -40px;
+      li {
+        list-style-type: none;
+        display: inline; 
+        padding-right: 20px;
+        a i {        
+          font-size: 30px;       
+        }
+      }
+    }  
+  } 
+
+  /* Testimonials  */
 
   .testimonials-section {
     width: 90%;
@@ -559,14 +568,14 @@ text-align: center;
 
   .table {
   display: block;  
-}
+  }
 
   //Home Page
   
   .homeBg {
     background-size: 551%;    
     max-height: 500px;    
-    background-position: 85% 50%;
+    background-position: 35% 30%;
     background-attachment: scroll;    
   }
 
@@ -621,22 +630,15 @@ text-align: center;
 
   .browseSvg {
     margin-top: 80px;  
-  }
-
-  .contactIcons {
-    margin-bottom: 80px;  
-  }
-
-  #contact a {    
-    padding: 40px; 
-  }
+  }  
 
   nav ul.sticky {
     text-align: left;    
   }
 
   nav ul li  {
-    margin-right: 9%;
+    margin-right: 9.7%;
+    padding-right: -10%;
   }
 
   section.module.parallax-1 {
