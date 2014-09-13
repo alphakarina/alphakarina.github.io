@@ -613,9 +613,7 @@ text-align: center;
       p {
         font-size: .7em;
         text-align: center;
-        margin-left: 0;
-        
-        //margin-left: 0;
+        margin-left: 0;        
       }
     
   }
@@ -633,12 +631,16 @@ text-align: center;
   }  
 
   nav ul.sticky {
-    text-align: left;    
+    display: none;
   }
 
   nav ul li  {
-    margin-right: 9.7%;
-    padding-right: -10%;
+    text-align: left;
+    margin-right: 0%;
+    padding-right: 5%;  
+    :nth-child(1) {
+      margin-left: -6px;
+    }  
   }
 
   section.module.parallax-1 {
